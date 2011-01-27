@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  status: MyString
-  zombie: MyString
+  message: MyString
+  location: MyString
 
 two:
-  status: MyString
-  zombie: MyString
+  message: MyString
+  location: MyString

@@ -17,7 +17,7 @@
     </tr>
     <tr>
       <td><%= f.text_field :message, :style=>'width:200px' %></td>
-      <td><%= f.select :location, Tweet::LOCATIONS, :prompt => "Where are You?", :style=>'width:75px' %></td>
+      <td><%= f.text_field :location, :style=>'width:75px' %></td>
     </tr>
   </table>
   <div class="actions">

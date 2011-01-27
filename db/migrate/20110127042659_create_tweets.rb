@@ -1,8 +1,8 @@
 class CreateTweets < ActiveRecord::Migration
   def self.up
     create_table :tweets do |t|
-      t.string :status
-      t.string :zombie
+      t.string :message
+      t.string :location
 
       t.timestamps
     end

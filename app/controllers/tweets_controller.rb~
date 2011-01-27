@@ -3,7 +3,6 @@ class TweetsController < ApplicationController
   # GET /tweets.xml
   def index
     @tweets = Tweet.all
-    @tweet = Tweet.new
 
     respond_to do |format|
       format.html # index.html.erb

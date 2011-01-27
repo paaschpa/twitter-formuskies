@@ -1,9 +1,4 @@
-body { 
-  background: url("../images/bg-clouds.png") repeat-x scroll 0 0 #C0DEED;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
+body { background-color: #fff; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -58,25 +53,4 @@ div.field, div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
-}
-
-.top-navigation {
-    background-color: #FFFFFF;
-    display: inline-block;
-    padding: 0 0.7em;
-    white-space: nowrap;
-    float:right;
-}
-
-.round {
-    -moz-border-radius: 5px 5px 5px 5px;
-}
-
-ul {
-    list-style: none outside none;
-}
-.top-navigation li{
-  float: left;
-  display: block;
-  width: 6em;
 }
