@@ -1,4 +1,5 @@
 class CreateTweets < ActiveRecord::Migration
+  drop_table :tweets
   def self.up
     create_table :tweets do |t|
       t.string :message
