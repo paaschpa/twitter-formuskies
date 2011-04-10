@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   # GET /tweets
   # GET /tweets.xml
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.order('created_at desc').limit(10).all
     @tweet = Tweet.new
 
     respond_to do |format|
@@ -45,12 +45,12 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       if @tweet.save
-        @tweets = Tweet.all
+        @tweets = Tweet.order('created_at desc').limit(10).all
         format.html { redirect_to(@tweet, :notice => 'Tweet was successfully created.') }
         format.js
         format.xml  { render :xml => @tweet, :status => :created, :location => @tweet }
       else
-        format.html { render :action => "new" }
+        format.html { redirect_to(:action => "new") }
         format.xml  { render :xml => @tweet.errors, :status => :unprocessable_entity }
       end
     end

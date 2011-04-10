@@ -1,4 +1,8 @@
-  <tr>
+  <% if tweet == @tweet %>
+    <tr id="highlight_me">
+  <% else %>
+    <tr>
+  <% end %>
     <td><%= tweet.message %></td>
     <td><%= getLocation(tweet.location) %></td>
     <td><%= link_to 'Show', tweet %></td>
