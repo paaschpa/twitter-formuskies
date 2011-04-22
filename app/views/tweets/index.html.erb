@@ -1,0 +1,16 @@
+<h1>Listing tweets</h1>
+<% if @tweet.errors %>
+  <div id='tweet_error'></div>
+<% end %>
+
+<div id='tweet_form'>
+<% if session[:user_id] %> 
+  <%= render 'form' %>
+<%  end %>
+</div>
+
+<div id='tweets'>
+  <%= render :partial => 'tweet_table' %>
+</div>
+<br />
+

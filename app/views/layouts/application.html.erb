@@ -7,8 +7,30 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="header" style="width: 800px; height: 22px">
+    <img src="../images/twitter_muskie_logo_header.png" style="float:left">    
+    <ul class="top-navigation round">
+      <li>Home</li>
+      <li>
+        <% if session[:user_id] %>
+          <%= link_to 'Logout', logout_path %>
+        <% else %>
+          <%= link_to 'Login', login_path %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="body" style="width: 800px; background-color: white">
+    <% if flash[:notice] %>
+      <br/>
+      <%= flash[:notice] %>
+    <% end %>
+    <div id="content_body" style="margin: 5px 5px 5px 5px">
+      <%= yield %> 
+    </div>
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,7 @@
+page.replace_html('tweets', :partial => 'tweet_table')
+page.select('form').each {|f| f.reset}
+page.select('new_tweet_row').each do |element|
+  element.visual_effect :highlight
+end
+
+page.replace_html('tweet_error', :text => @tweet.errors.values[0] )

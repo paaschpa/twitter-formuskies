@@ -1,0 +1,16 @@
+<% if tweet == @tweet %>
+  <tr id='new_tweet_row'>
+<% else %>
+  <tr>
+<% end %>    
+  <td><%= tweet.user.username %></td>
+  <td><%= tweet.message %></td>
+  <td><%= distance_of_time_in_words(tweet.created_at, Time.now) + " ago" %></td>
+  <td>
+    <% if tweet.user %>
+      <% if tweet.user.id == session[:user_id] %>
+        <%= link_to 'Destroy', tweet, :confirm => 'Are you sure?', :method => :delete %>
+      <% end %>
+    <% end %>
+  </td>
+</tr>

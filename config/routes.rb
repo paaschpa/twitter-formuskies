@@ -1,4 +1,10 @@
 TwitterForMuskies::Application.routes.draw do
+  resources :users
+  resources :tweets
+
+  root :to => 'tweets#index'
+  match '/login' => 'users#login', :as => 'login'
+  match '/logout' => 'users#logout', :as => 'logout'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
